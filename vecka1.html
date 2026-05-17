@@ -85,4 +85,85 @@ när [högerpil] trycks ned
     <li>Gå till <strong>Händelser</strong>.</li>
     <li>Dra ut blocket <code>när [vänsterpil] trycks ned</code>.</li>
     <li>Gå till <strong>Rörelse</strong>.</li>
-    <li>Dra ut blocket <code>
+    <li>Dra ut blocket <code>ändra x med -10</code>.</li>
+</ol>
+
+<pre>
+när [vänsterpil] trycks ned
+    ändra x med -10
+</pre>
+
+<div class="success-box">
+    Testa: Tryck på vänsterpil – figuren ska röra sig åt vänster.
+</div>
+
+<hr>
+
+<h2>Steg 5 – Få spelaren att vända åt rätt håll</h2>
+
+<p>Just nu kanske figuren ser ut att “backa” när den går åt vänster. Det fixar vi.</p>
+
+<h3>Kontrollera grundriktningen</h3>
+<ol>
+    <li>Klicka på fliken <strong>Kostym</strong>.</li>
+    <li>Se till att figuren tittar åt höger.</li>
+    <li>Om inte: klicka på <strong>Vänd horisontellt</strong>.</li>
+</ol>
+
+<h3>Lägg till riktning i koden</h3>
+
+<p><strong>För höger:</strong></p>
+<pre>
+när [högerpil] trycks ned
+    peka i riktning 90
+    ändra x med 10
+</pre>
+
+<p><strong>För vänster:</strong></p>
+<pre>
+när [vänsterpil] trycks ned
+    peka i riktning -90
+    ändra x med -10
+</pre>
+
+<hr>
+
+<h2>Steg 6 – Bonus: Lägg till gånganimation</h2>
+
+<h3>Skapa två kostymer</h3>
+<ol>
+    <li>Klicka på <strong>Kostym</strong>.</li>
+    <li>Duplicera kostymen.</li>
+    <li>Ändra benen/armarna lite så det ser ut som ett steg.</li>
+</ol>
+
+<h3>Byt kostym när spelaren går</h3>
+
+<pre>
+när [högerpil] trycks ned
+    peka i riktning 90
+    ändra x med 10
+    nästa kostym
+</pre>
+
+<pre>
+när [vänsterpil] trycks ned
+    peka i riktning -90
+    ändra x med -10
+    nästa kostym
+</pre>
+
+<hr>
+
+<h2>Du är klar med vecka 1 när:</h2>
+<ul>
+    <li>Figuren går åt höger.</li>
+    <li>Figuren går åt vänster.</li>
+    <li>Figuren vänder sig åt rätt håll.</li>
+    <li>(Bonus) Figuren har gånganimation.</li>
+</ul>
+
+<a class="back" href="index.html">← Tillbaka till startsidan</a>
+
+</body>
+</html>
