@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Vecka 1 – Skapa spelaren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Vecka 1 – Skapa spelaren</h1>
+
+<div class="info-box">
+    Den här veckan bygger du <strong>spelaren</strong> – figuren du kommer styra i spelet.  
+    Du lär dig sidledsrörelse, riktning och enkel animation.
+</div>
+
+<h2>Mål för veckan</h2>
+<ul>
+    <li>Skapa eller välja en sprite (figur)</li>
+    <li>Få den att gå åt vänster och höger</li>
+    <li>Få den att vända åt rätt håll</li>
+    <li>(Bonus) Lägg till gånganimation</li>
+</ul>
+
+<hr>
+
+<h2>Steg 1 – Starta ett nytt Scratch-projekt</h2>
+<ol>
+    <li>Gå till <strong>scratch.mit.edu</strong>.</li>
+    <li>Klicka på <strong>“Skapa”</strong>.</li>
+    <li>Du får nu ett nytt projekt med Scratch-katten.</li>
+</ol>
+
+<div class="warning-box">
+    Om du inte vill använda katten:  
+    Högerklicka på katten i spritelistan → <strong>“ta bort”</strong>.
+</div>
+
+<hr>
+
+<h2>Steg 2 – Skapa eller välj din spelare</h2>
+
+<h3>Alternativ A – Välj en färdig figur</h3>
+<ol>
+    <li>Klicka på den blå katten med plus (”Välj en sprite”).</li>
+    <li>Välj en figur du gillar.</li>
+</ol>
+
+<h3>Alternativ B – Rita din egen figur</h3>
+<ol>
+    <li>Klicka på pensel-ikonen (”Rita en sprite”).</li>
+    <li>Rita din figur.</li>
+    <li>Döp den till <strong>“Spelare”</strong>.</li>
+</ol>
+
+<hr>
+
+<h2>Steg 3 – Få spelaren att gå åt höger</h2>
+
+<p>Nu ska du lägga till block så att spelaren går åt höger när du trycker på högerpil.</p>
+
+<ol>
+    <li>Markera din spelare i spritelistan.</li>
+    <li>Klicka på fliken <strong>Kod</strong>.</li>
+    <li>Gå till <strong>Händelser</strong>.</li>
+    <li>Dra ut blocket <code>när [högerpil] trycks ned</code>.</li>
+    <li>Gå till <strong>Rörelse</strong>.</li>
+    <li>Dra ut blocket <code>ändra x med 10</code>.</li>
+</ol>
+
+<pre>
+när [högerpil] trycks ned
+    ändra x med 10
+</pre>
+
+<div class="success-box">
+    Testa: Tryck på högerpil – figuren ska röra sig åt höger.
+</div>
+
+<hr>
+
+<h2>Steg 4 – Få spelaren att gå åt vänster</h2>
+
+<ol>
+    <li>Gå till <strong>Händelser</strong>.</li>
+    <li>Dra ut blocket <code>när [vänsterpil] trycks ned</code>.</li>
+    <li>Gå till <strong>Rörelse</strong>.</li>
+    <li>Dra ut blocket <code>
