@@ -7,6 +7,18 @@
 </head>
 <body>
 
+<header class="site-header">
+    <div class="header-inner">
+        <h1 class="site-title">Scratchkurs – Plattformsspel</h1>
+        <nav class="site-nav">
+            <a href="index.html">Start</a>
+            <a href="bestpractice.html">Best Practice</a>
+            <a href="vecka1.html">Vecka 1</a>
+            <a href="vecka2.html">Vecka 2</a>
+        </nav>
+    </div>
+</header>
+
 <h1>Vecka 2 – Gravitation och hopp</h1>
 
 <div class="info-box">
@@ -45,8 +57,6 @@
 
 <p>Gravitation betyder att spelaren hela tiden dras nedåt.</p>
 
-<p>Lägg in detta script:</p>
-
 <pre>
 för alltid
     ändra YHastighet med -1
@@ -63,19 +73,34 @@ för alltid
 
 <h2>Steg 3 – Skapa marken</h2>
 
-<p>För att spelaren inte ska falla genom marken behöver du en plattform.</p>
+<p>Nu ska du skapa marken som spelaren ska stå på.</p>
 
-<ol>
-    <li>Klicka på <strong>Välj en sprite</strong>.</li>
-    <li>Välj t.ex. <strong>“Line”</strong> eller rita en egen rektangel.</li>
-    <li>Döp den till <strong>Mark</strong>.</li>
-</ol>
+<h3>Hur bred ska marken vara?</h3>
+<p>Gör det enkelt i början: låt marken vara <strong>hela scenens bredd</strong>.</p>
+
+<ul>
+    <li>Scenens bredd = 480 px</li>
+    <li>Markens bredd = 480 px</li>
+</ul>
+
+<h3>Hur hög ska marken vara?</h3>
+<p>20–40 px är lagom.</p>
+
+<h3>Var ska marken placeras?</h3>
+<p>Placera marken längst ned på scenen:</p>
+
+<ul>
+    <li><strong>x = 0</strong></li>
+    <li><strong>y = –140</strong></li>
+</ul>
 
 <div class="info-box">
     Tips: Använd en stark färg på marken.  
     Det gör kollisioner stabilare.  
     Se <a href="bestpractice.html">Best Practice</a> punkt 8.
 </div>
+
+<p>Så här ska marken ungefär se ut:</p>
 
 <hr>
 
@@ -85,16 +110,16 @@ för alltid
 
 <pre>
 om <färg [markens färg] vidrörs>
-    sätt YHastighet till 0
-    sätt y till (y-position + 1)
+sätt YHastighet till 0
+sätt y till (y-position + 1)
 </pre>
 
 <div class="warning-box">
-    <strong>Felsökning:</strong> Om spelaren fastnar i marken:  
-    – öka värdet i <code>sätt y till (y-position + 1)</code> till 2 eller 3.
-    <br><br>
-    Om spelaren “studsar”:  
-    – kontrollera att <code>sätt YHastighet till 0</code> ligger före y‑justeringen.
+<strong>Felsökning:</strong> Om spelaren fastnar i marken:
+– öka värdet i <code>sätt y till (y-position + 1)</code> till 2 eller 3.
+<br><br>
+Om spelaren “studsar”:
+– kontrollera att <code>sätt YHastighet till 0</code> ligger före y‑justeringen.
 </div>
 
 <hr>
@@ -103,26 +128,24 @@ om <färg [markens färg] vidrörs>
 
 <p>Nu ska spelaren kunna hoppa när man trycker på mellanslag.</p>
 
-<p>Lägg till detta:</p>
-
 <pre>
 när [mellanslag] trycks ned
-    om <färg [markens färg] vidrörs>
-        sätt YHastighet till 15
+om <färg [markens färg] vidrörs>
+sätt YHastighet till 15
 </pre>
 
 <div class="success-box">
-    Tips: Det är viktigt att bara kunna hoppa när man står på marken.  
-    Annars kan man hoppa i luften.
+Tips: Det är viktigt att bara kunna hoppa när man står på marken.
+Annars kan man hoppa i luften.
 </div>
 
 <div class="warning-box">
-    <strong>Felsökning:</strong> Om spelaren inte hoppar:
-    <ul>
-        <li>Kontrollera att färgen i <code>vidrörs</code> är exakt samma som markens färg.</li>
-        <li>Kontrollera att rotationsläget är <strong>vänster–höger</strong> (påverkar ibland y‑kollisioner).</li>
-        <li>Testa att öka hoppstyrkan till 18 eller 20.</li>
-    </ul>
+<strong>Felsökning:</strong> Om spelaren inte hoppar:
+<ul>
+<li>Kontrollera att färgen i <code>vidrörs</code> är exakt samma som markens färg.</li>
+<li>Kontrollera att rotationsläget är <strong>vänster–höger</strong>.</li>
+<li>Testa att öka hoppstyrkan till 18 eller 20.</li>
+</ul>
 </div>
 
 <hr>
@@ -132,26 +155,30 @@ när [mellanslag] trycks ned
 <p>Nu kan du justera känslan i spelet:</p>
 
 <ul>
-    <li><strong>Gravitation:</strong> ändra värdet i <code>ändra YHastighet med -1</code></li>
-    <li><strong>Hopphöjd:</strong> ändra värdet i <code>sätt YHastighet till 15</code></li>
+<li><strong>Gravitation:</strong> ändra värdet i <code>ändra YHastighet med -1</code></li>
+<li><strong>Hopphöjd:</strong> ändra värdet i <code>sätt YHastighet till 15</code></li>
 </ul>
 
 <div class="info-box">
-    Tips: Testa ofta och ändra lite i taget.  
-    Se <a href="bestpractice.html">Best Practice</a> punkt 7.
+Tips: Testa ofta och ändra lite i taget.
+Se <a href="bestpractice.html">Best Practice</a> punkt 7.
 </div>
 
 <hr>
 
 <h2>Du är klar med vecka 2 när:</h2>
 <ul>
-    <li>Spelaren faller nedåt av gravitation</li>
-    <li>Spelaren stannar på marken</li>
-    <li>Spelaren kan hoppa</li>
-    <li>Hoppet fungerar bara när man står på marken</li>
+<li>Spelaren faller nedåt av gravitation</li>
+<li>Spelaren stannar på marken</li>
+<li>Spelaren kan hoppa</li>
+<li>Hoppet fungerar bara när man står på marken</li>
 </ul>
 
 <a class="back" href="index.html">← Tillbaka till startsidan</a>
+
+<footer class="site-footer">
+<p>Scratchkurs – bygg ditt eget plattformsspel • Skapad av Erik</p>
+</footer>
 
 </body>
 </html>
