@@ -1,0 +1,109 @@
+/* ====== Grundlayout ====== */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    line-height: 1.7;
+    background: #f7f7fb;
+    color: #333;
+}
+
+/* ====== Rubriker ====== */
+h1 {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #34495e;
+    border-left: 6px solid #4a90e2;
+    padding-left: 12px;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #4a4a4a;
+}
+
+/* ====== Länkar ====== */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====== Kodblock ====== */
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.95rem;
+}
+
+/* ====== Inline-kod ====== */
+code {
+    background: #e8e8e8;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* ====== Listor ====== */
+ul, ol {
+    margin-left: 20px;
+}
+
+/* ====== Avdelare ====== */
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 40px 0;
+}
+
+/* ====== Tillbaka-länk ====== */
+.back {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px 14px;
+    background: #4a90e2;
+    color: white !important;
+    border-radius: 6px;
+}
+
+.back:hover {
+    background: #357ab8;
+}
+
+/* ====== Info-rutor ====== */
+.info-box {
+    background: #eef6ff;
+    border-left: 5px solid #4a90e2;
+    padding: 15px 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+.warning-box {
+    background: #fff4e5;
+    border-left: 5px solid #f39c12;
+    padding: 15px 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+.success-box {
+    background: #e8f8f0;
+    border-left: 5px solid #27ae60;
+    padding: 15px 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
