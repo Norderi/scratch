@@ -107,3 +107,47 @@ hr {
     margin: 25px 0;
     border-radius: 4px;
 }
+/* ====== HEADER ====== */
+.site-header {
+    background: #4a90e2;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.header-inner {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.site-nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+.site-footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    background: #f0f0f0;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
