@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Practice – Scratch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Best Practice för Scratch-projekt</h1>
+
+<div class="info-box">
+    Dessa riktlinjer hjälper dig bygga stabila, tydliga och lättfelsökta Scratch-projekt.  
+    Perfekt när du bygger större spel som plattformsspelet i kursen.
+</div>
+
+<h2>1. Döp allt tydligt</h2>
+<ul>
+    <li>Sprites: <code>Spelare</code>, <code>Fiende1</code>, <code>RörligPlattform</code></li>
+    <li>Variabler: <code>Liv</code>, <code>YHastighet</code>, <code>Nivå</code></li>
+</ul>
+<div class="warning-box">
+    Undvik namn som <code>Sprite1</code>, <code>Test</code> eller <code>Variabel1</code>.
+</div>
+
+<h2>2. En sprite = en uppgift</h2>
+<p>Varje sprite ska ha ett tydligt ansvar.</p>
+<ul>
+    <li>Spelare = rörelse, hopp, animation</li>
+    <li>Fiende = patrullera, skada spelaren</li>
+    <li>Plattform = röra sig</li>
+    <li>Flagga = byta nivå</li>
+</ul>
+
+<h2>3. Använd meddelanden för att styra spelet</h2>
+<p>Meddelanden är Scratchs sätt att skapa struktur.</p>
+<ul>
+    <li><code>Starta spel</code></li>
+    <li><code>Nästa nivå</code></li>
+    <li><code>Game Over</code></li>
+    <li><code>Spelare dog</code></li>
+</ul>
+
+<h2>4. Separera logik från grafik</h2>
+<p>Ha olika script för:</p>
+<ul>
+    <li>rörelse</li>
+    <li>kollision</li>
+    <li>animation</li>
+    <li>effekter</li>
+</ul>
+
+<h2>5. Använd variabler smart</h2>
+<p>Skapa bara variabler som behövs och döp dem tydligt.</p>
+
+<h2>6. Använd listor för avancerade spel</h2>
+<p>Listor är perfekta för nivåer, highscore och sparsystem.</p>
+
+<h2>7. Testa ofta – bygg i små steg</h2>
+<div class="info-box">
+    Lägg till en funktion → testa → fixa → gå vidare.
+</div>
+
+<h2>8. Använd färgkollisioner med omsorg</h2>
+<ul>
+    <li>Starka färger</li>
+    <li>Inga gradienter</li>
+    <li>Inga tunna linjer</li>
+</ul>
+
+<h2>9. Håll koden ren och grupperad</h2>
+<ul>
+    <li>Använd kommentarer</li>
+    <li>Gruppera block som hör ihop</li>
+    <li>Dela upp långa script</li>
+</ul>
+
+<h2>10. Optimera prestanda</h2>
+<ul>
+    <li>Undvik onödiga “för alltid”-loopar</li>
+    <li>Ta bort kloner när de inte behövs</li>
+    <li>Använd <code>vänta 0 sekunder</code> för att avlasta</li>
+</ul>
+
+<h2>11. Planera innan du bygger</h2>
+<p>En enkel plan sparar mycket tid.</p>
+
+<h2>12. Spara ofta och använd versioner</h2>
+<p>Döp versioner: <code>Plattformsspel v1</code>, <code>v2</code>, <code>v3</code>.</p>
+
+<a class="back" href="index.html">← Tillbaka till startsidan</a>
+
+</body>
+</html>
