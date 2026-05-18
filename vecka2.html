@@ -112,20 +112,29 @@ när grön flagga klickas
 
 <h2>Steg 4 – Stoppa spelaren när den nuddar marken</h2>
 
-<p>Lägg till detta i spelarens kod:</p>
+<p>Det här steget ska ligga <strong>i samma kodblock</strong> som gravitationen.  
+Alltså: <strong>i samma “för alltid”-loop</strong> som i Steg 2.</p>
+
+<p>Hela scriptet ska se ut så här:</p>
 
 <pre>
-om <färg [markens färg] vidrörs>
-sätt YHastighet till 0
-sätt y till (y-position + 1)
+när grön flagga klickas
+    för alltid
+        ändra YHastighet med -1
+        ändra y med YHastighet
+
+        om <färg [markens färg] vidrörs>
+            sätt YHastighet till 0
+            sätt y till (y-position + 1)
 </pre>
 
 <div class="warning-box">
-<strong>Felsökning:</strong> Om spelaren fastnar i marken:
-– öka värdet i <code>sätt y till (y-position + 1)</code> till 2 eller 3.
-<br><br>
-Om spelaren “studsar”:
-– kontrollera att <code>sätt YHastighet till 0</code> ligger före y‑justeringen.
+    <strong>Felsökning:</strong>
+    <ul>
+        <li>Om spelaren inte stannar på marken – kontrollera att detta ligger <stronginne i samma loop</strong>.</li>
+        <li>Om spelaren fastnar – ändra <code>+1</code> till <code>+2</code> eller <code>+3</code>.</li>
+        <li>Om spelaren “studsar” – kontrollera att <code>sätt YHastighet till 0</code> ligger <strong>före</strong> y‑justeringen.</li>
+    </ul>
 </div>
 
 <hr>
