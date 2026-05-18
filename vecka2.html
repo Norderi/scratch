@@ -55,18 +55,24 @@
 
 <h2>Steg 2 – Lägg till gravitation</h2>
 
-<p>Gravitation betyder att spelaren hela tiden dras nedåt.</p>
+<p>Gravitation betyder att spelaren hela tiden dras nedåt. För att Scratch ska köra gravitationen måste den startas med <strong>när grön flagga klickas</strong>.</p>
+
+<p>Lägg in detta script i spelaren:</p>
 
 <pre>
-för alltid
-    ändra YHastighet med -1
-    ändra y med YHastighet
+när grön flagga klickas
+    för alltid
+        ändra YHastighet med -1
+        ändra y med YHastighet
 </pre>
 
 <div class="warning-box">
-    <strong>Felsökning:</strong> Om spelaren faller för snabbt eller långsamt  
-    – ändra värdet i <code>ändra YHastighet med -1</code>.  
-    Mindre tal = långsammare fall. Större tal = snabbare fall.
+    <strong>Felsökning:</strong> Om spelaren inte faller:
+    <ul>
+        <li>Kontrollera att <code>när grön flagga klickas</code> finns med.</li>
+        <li>Kontrollera att blocken ligger i <strong>spelaren</strong>, inte i marken.</li>
+        <li>Kontrollera att variabeln heter exakt <strong>YHastighet</strong>.</li>
+    </ul>
 </div>
 
 <hr>
