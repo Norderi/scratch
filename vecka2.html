@@ -123,7 +123,7 @@ när grön flagga klickas
         ändra YHastighet med -1
         ändra y med YHastighet
 
-        om <färg [markens färg] vidrörs>
+        om &lt;färg [markens färg] vidrörs&gt;
             sätt YHastighet till 0
             sätt y till (y-position + 1)
 </pre>
@@ -131,7 +131,7 @@ när grön flagga klickas
 <div class="warning-box">
     <strong>Felsökning:</strong>
     <ul>
-        <li>Om spelaren inte stannar på marken – kontrollera att detta ligger <stronginne i samma loop</strong>.</li>
+        <li>Om spelaren inte stannar på marken – kontrollera att detta ligger <strong>inne i samma loop</strong>.</li>
         <li>Om spelaren fastnar – ändra <code>+1</code> till <code>+2</code> eller <code>+3</code>.</li>
         <li>Om spelaren “studsar” – kontrollera att <code>sätt YHastighet till 0</code> ligger <strong>före</strong> y‑justeringen.</li>
     </ul>
@@ -145,22 +145,22 @@ när grön flagga klickas
 
 <pre>
 när [mellanslag] trycks ned
-om <färg [markens färg] vidrörs>
-sätt YHastighet till 15
+    om &lt;färg [markens färg] vidrörs&gt;
+        sätt YHastighet till 15
 </pre>
 
 <div class="success-box">
-Tips: Det är viktigt att bara kunna hoppa när man står på marken.
-Annars kan man hoppa i luften.
+    Tips: Det är viktigt att bara kunna hoppa när man står på marken.  
+    Annars kan man hoppa i luften.
 </div>
 
 <div class="warning-box">
-<strong>Felsökning:</strong> Om spelaren inte hoppar:
-<ul>
-<li>Kontrollera att färgen i <code>vidrörs</code> är exakt samma som markens färg.</li>
-<li>Kontrollera att rotationsläget är <strong>vänster–höger</strong>.</li>
-<li>Testa att öka hoppstyrkan till 18 eller 20.</li>
-</ul>
+    <strong>Felsökning:</strong> Om spelaren inte hoppar:
+    <ul>
+        <li>Kontrollera att färgen i <code>vidrörs</code> är exakt samma som markens färg.</li>
+        <li>Kontrollera att rotationsläget är <strong>vänster–höger</strong>.</li>
+        <li>Testa att öka hoppstyrkan till 18 eller 20.</li>
+    </ul>
 </div>
 
 <hr>
@@ -170,29 +170,29 @@ Annars kan man hoppa i luften.
 <p>Nu kan du justera känslan i spelet:</p>
 
 <ul>
-<li><strong>Gravitation:</strong> ändra värdet i <code>ändra YHastighet med -1</code></li>
-<li><strong>Hopphöjd:</strong> ändra värdet i <code>sätt YHastighet till 15</code></li>
+    <li><strong>Gravitation:</strong> ändra värdet i <code>ändra YHastighet med -1</code></li>
+    <li><strong>Hopphöjd:</strong> ändra värdet i <code>sätt YHastighet till 15</code></li>
 </ul>
 
 <div class="info-box">
-Tips: Testa ofta och ändra lite i taget.
-Se <a href="bestpractice.html">Best Practice</a> punkt 7.
+    Tips: Testa ofta och ändra lite i taget.  
+    Se <a href="bestpractice.html">Best Practice</a> punkt 7.
 </div>
 
 <hr>
 
 <h2>Du är klar med vecka 2 när:</h2>
 <ul>
-<li>Spelaren faller nedåt av gravitation</li>
-<li>Spelaren stannar på marken</li>
-<li>Spelaren kan hoppa</li>
-<li>Hoppet fungerar bara när man står på marken</li>
+    <li>Spelaren faller nedåt av gravitation</li>
+    <li>Spelaren stannar på marken</li>
+    <li>Spelaren kan hoppa</li>
+    <li>Hoppet fungerar bara när man står på marken</li>
 </ul>
 
 <a class="back" href="index.html">← Tillbaka till startsidan</a>
 
 <footer class="site-footer">
-<p>Scratchkurs – bygg ditt eget plattformsspel • Skapad av Erik</p>
+    <p>Scratchkurs – bygg ditt eget plattformsspel • Skapad av Erik</p>
 </footer>
 
 </body>
