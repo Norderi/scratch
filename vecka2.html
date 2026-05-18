@@ -206,6 +206,39 @@ när [mellanslag] trycks ned
 </div>
 
 <hr>
+<h2>Total kodöversikt – så här ska hela spelarens kod se ut efter Vecka 2</h2>
+
+<div class="info-box">
+    Här ser du hela koden samlad i ett enda block. 
+    Om din kod inte ser ut så här behöver du flytta in blocken i samma loop.
+</div>
+
+<pre>
+när grön flagga klickas
+    för alltid
+        <!-- Gravitation -->
+        ändra YHastighet med -1
+        ändra y med YHastighet
+
+        <!-- Markkollision -->
+        om &lt;färg [markens färg] vidrörs&gt;
+            sätt YHastighet till 0
+            sätt y till (y-position + 1)
+</pre>
+
+<h3>Hoppkod (separat block)</h3>
+
+<pre>
+när [mellanslag] trycks ned
+    om &lt;färg [markens färg] vidrörs&gt;
+        sätt YHastighet till 15
+</pre>
+
+<div class="warning-box">
+    <strong>Viktigt:</strong> 
+    All gravitation och markkollision ska ligga i <strong>ett enda</strong> kodblock.
+    Hoppet är det enda som ligger i ett separat block.
+</div>
 
 <h2>Du är klar med vecka 2 när:</h2>
 <ul>
