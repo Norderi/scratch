@@ -136,6 +136,32 @@ när grön flagga klickas
         <li>Om spelaren “studsar” – kontrollera att <code>sätt YHastighet till 0</code> ligger <strong>före</strong> y‑justeringen.</li>
     </ul>
 </div>
+<div class="info-box">
+    <h3>Avancerat tips – Robust markkollision</h3>
+    <p>
+        Om spelaren ibland hamnar lite inuti marken kan du använda en mer robust metod.
+        Den flyttar spelaren uppåt steg för steg tills den inte längre nuddar marken.
+        Det gör att spelaren aldrig fastnar eller sjunker in.
+    </p>
+
+    <pre>
+när grön flagga klickas
+    för alltid
+        ändra YHastighet med -1
+        ändra y med YHastighet
+
+        upprepa tills &lt;färg [markens färg] vidrörs&gt;
+            ändra y med -1
+        slut
+
+        sätt YHastighet till 0
+    </pre>
+
+    <p>
+        Den här metoden är lite mer avancerad men ger perfekt kollision,
+        även om spelaren faller snabbt eller har en ojämn kostym.
+    </p>
+</div>
 
 <hr>
 

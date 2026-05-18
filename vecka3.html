@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Vecka 3 – Rörelse och plattformar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <h1 class="site-title">Scratchkurs – Plattformsspel</h1>
+        <nav class="site-nav">
+            <a href="index.html">Start</a>
+            <a href="bestpractice.html">Best Practice</a>
+            <a href="vecka1.html">Vecka 1</a>
+            <a href="vecka2.html">Vecka 2</a>
+            <a href="vecka3.html">Vecka 3</a>
+        </nav>
+    </div>
+</header>
+
+<h1>Vecka 3 – Rörelse och plattformar</h1>
+
+<div class="info-box">
+    Den här veckan ska du ge spelaren <strong>vänster/höger‑rörelse</strong>, 
+    <strong>vändning</strong> och <strong>plattformar</strong>.  
+    Nu börjar spelet kännas som ett riktigt plattformsspel!
+</div>
+
+<h2>Mål för veckan</h2>
+<ul>
+    <li>Gå åt vänster och höger</li>
+    <li>Vända figuren åt rätt håll</li>
+    <li>Stoppa vid väggar</li>
+    <li>Skapa plattformar att hoppa på</li>
+</ul>
+
+<hr>
+
+<h2>Steg 1 – Lägg till höger- och vänsterrörelse</h2>
+
+<p>Lägg detta i samma sprite som gravitationen:</p>
+
+<pre>
+när grön flagga klickas
+    för alltid
+        om &lt;tangent [högerpil] nedtryckt&gt;
+            ändra x med 5
+        om &lt;tangent [vänsterpil] nedtryckt&gt;
+            ändra x med -5
+</pre>
+
+<div class="info-box">
+    Tips: 5 är en bra hastighet.  
+    Vill du ha snabbare spel – öka till 6 eller 7.
+</div>
+
+<hr>
+
+<h2>Steg 2 – Vänd spelaren åt rätt håll</h2>
+
+<p>För att spelaren ska se åt rätt håll när den går:</p>
+
+<pre>
+om &lt;tangent [högerpil] nedtryckt&gt;
+    sätt riktning till 90
+
+om &lt;tangent [vänsterpil] nedtryckt&gt;
+    sätt riktning till -90
+</pre>
+
+<div class="warning-box">
+    <strong>Viktigt:</strong>  
+    Sätt rotationsstil till <strong>vänster–höger</strong> i sprite‑inställningarna.  
+    Annars kan figuren hamna upp‑och‑ner.
+</div>
+
+<hr>
+
+<h2>Steg 3 – Skapa plattformar</h2>
+
+<p>Nu ska du skapa fler plattformar att hoppa på.</p>
+
+<ul>
+    <li>Skapa en ny sprite</li>
+    <li>Rita en rektangel (20–40 px hög)</li>
+    <li>Placera den någonstans ovanför marken</li>
+</ul>
+
+<p>Du kan kopiera plattformen för att göra flera.</p>
+
+<div class="info-box">
+    Tips: Använd samma färg på alla plattformar.  
+    Då kan du använda samma kollisionstest.
+</div>
+
+<hr>
+
+<h2>Steg 4 – Stå på plattformar</h2>
+
+<p>Nu ska spelaren kunna stå på plattformar på samma sätt som på marken.</p>
+
+<p>Lägg detta i samma <strong>för alltid</strong>-loop som gravitationen:</p>
+
+<pre>
+om &lt;färg [plattformens färg] vidrörs&gt;
+    sätt YHastighet till 0
+    sätt y till (y-position + 1)
+</pre>
+
+<div class="warning-box">
+    <strong>Felsökning:</strong>
+    <ul>
+        <li>Om spelaren sjunker in – ändra +1 till +2 eller +3.</li>
+        <li>Om spelaren “studsar” – kontrollera ordningen på blocken.</li>
+    </ul>
+</div>
+
+<hr>
+
+<h2>Steg 5 – Stoppa vid väggar</h2>
+
+<p>Skapa en väggsprite (rektangel) och placera den på scenen.</p>
+
+<p>Lägg sedan till detta i spelarens kod:</p>
+
+<pre>
+om &lt;färg [väggens färg] vidrörs&gt;
+    ändra x med -5
+</pre>
+
+<p>Och för andra hållet:</p>
+
+<pre>
+om &lt;färg [väggens färg] vidrörs&gt;
+    ändra x med 5
+</pre>
+
+<div class="info-box">
+    Tips: Du kan använda samma väggfärg för alla väggar.
+</div>
+
+<hr>
+
+<h2>Steg 6 – Kombinera allt</h2>
+
+<p>Nu har du:</p>
+
+<ul>
+    <li>Gravitation</li>
+    <li>Hopp</li>
+    <li>Vänster/höger‑rörelse</li>
+    <li>Vändning</li>
+    <li>Plattformar</li>
+    <li>Väggar</li>
+</ul>
+
+<p>Spelet börjar bli riktigt spelbart!</p>
+
+<hr>
+
+<h2>Du är klar med vecka 3 när:</h2>
+<ul>
+    <li>Spelaren kan gå vänster och höger</li>
+    <li>Spelaren vänder åt rätt håll</li>
+    <li>Spelaren kan hoppa upp på plattformar</li>
+    <li>Spelaren stoppas av väggar</li>
+</ul>
+
+<a class="back" href="index.html">← Tillbaka till startsidan</a>
+
+<footer class="site-footer">
+    <p>Scratchkurs – bygg ditt eget plattformsspel • Skapad av Erik</p>
+</footer>
+
+</body>
+</html>
