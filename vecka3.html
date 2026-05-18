@@ -149,7 +149,7 @@ om &lt;färg [väggens färg] vidrörs&gt;
 
 <hr>
 
-<h2>Total kodöversikt – så här ska hela spelarens kod se ut</h2>
+<h2>Total kodöversikt – så här ska hela spelarens kod se ut efter Vecka 3</h2>
 
 <div class="info-box">
     Här ser du hela koden samlad i ett enda block. 
@@ -159,11 +159,9 @@ om &lt;färg [väggens färg] vidrörs&gt;
 <pre>
 när grön flagga klickas
     för alltid
-        <!-- Gravitation -->
         ändra YHastighet med -1
         ändra y med YHastighet
 
-        <!-- Sidledsrörelse -->
         om &lt;tangent [högerpil] nedtryckt&gt;
             ändra x med 5
             sätt riktning till 90
@@ -172,16 +170,20 @@ när grön flagga klickas
             ändra x med -5
             sätt riktning till -90
 
-        <!-- Markkollision -->
         om &lt;färg [markens färg] vidrörs&gt;
             sätt YHastighet till 0
             sätt y till (y-position + 1)
 
-        <!-- Plattformskollision -->
         om &lt;färg [plattformens färg] vidrörs&gt;
             sätt YHastighet till 0
             sätt y till (y-position + 1)
 </pre>
+
+<div class="warning-box">
+    <strong>Viktigt:</strong> Allt ovan ska ligga i <strong>ett enda</strong> kodblock.
+    Om du har fler block med "när grön flagga klickas" för spelaren – ta bort dem.
+</div>
+
 
 <div class="warning-box">
     <strong>Viktigt:</strong> Allt ovan ska ligga i <strong>ett enda</strong> kodblock.
