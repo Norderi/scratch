@@ -125,40 +125,46 @@ om &lt;färg [plattformens färg] vidrörs&gt;
 
 <hr>
 
-<h2>Steg 5 – Stoppa vid väggar</h2>
+<h2>Steg 5 – Lägg till väggkollision</h2>
 
-<p>Skapa en väggsprite (rektangel) och placera den på scenen.</p>
+<p>
+Nu ska vi se till att spelaren inte kan gå igenom väggarna. 
+För att det ska fungera måste väggkoden ligga <strong>inuti samma block</strong> som sidledsrörelsen.
+</p>
 
-<p>Lägg sedan till detta i spelarens kod:</p>
+<p>
+Det betyder:
+</p>
+
+<ul>
+    <li>När du går åt höger ska väggkoden ligga <strong>under</strong> “tangent högerpil nedtryckt”.</li>
+    <li>När du går åt vänster ska väggkoden ligga <strong>under</strong> “tangent vänsterpil nedtryckt”.</li>
+</ul>
+
+<p>
+Annars fungerar inte kollisionen och spelaren kan gå igenom väggen.
+</p>
+
+<h3>Så här ska koden se ut:</h3>
 
 <pre>
-när grön flagga klickas
-    för alltid
-        ändra YHastighet med -1
-        ändra y med YHastighet
+om &lt;tangent [högerpil] nedtryckt&gt;
+    ändra x med 5
+    sätt riktning till 90
+    om &lt;färg [väggens färg] vidrörs&gt;
+        ändra x med -5
 
-        om &lt;tangent [högerpil] nedtryckt&gt;
-            ändra x med 5
-            om &lt;färg [väggens färg] vidrörs&gt;
-                ändra x med -5
-
-        om &lt;tangent [vänsterpil] nedtryckt&gt;
-            ändra x med -5
-            om &lt;färg [väggens färg] vidrörs&gt;
-                ändra x med 5
-
-        om &lt;färg [markens färg] vidrörs&gt;
-            sätt YHastighet till 0
-            sätt y till (y-position + 1)
-
-        om &lt;färg [plattformens färg] vidrörs&gt;
-            sätt YHastighet till 0
-            sätt y till (y-position + 1)
+om &lt;tangent [vänsterpil] nedtryckt&gt;
+    ändra x med -5
+    sätt riktning till -90
+    om &lt;färg [väggens färg] vidrörs&gt;
+        ändra x med 5
 </pre>
 
-<div class="info-box">
-    Tips: Du kan använda samma väggfärg för alla väggar.
-</div>
+<p>
+Nu kan spelaren inte längre gå igenom väggarna – den stoppas och flyttas tillbaka åt motsatt håll.
+</p>
+
 
 <hr>
 
