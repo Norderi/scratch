@@ -132,15 +132,28 @@ om &lt;färg [plattformens färg] vidrörs&gt;
 <p>Lägg sedan till detta i spelarens kod:</p>
 
 <pre>
-om &lt;färg [väggens färg] vidrörs&gt;
-    ändra x med -5
-</pre>
+när grön flagga klickas
+    för alltid
+        ändra YHastighet med -1
+        ändra y med YHastighet
 
-<p>Och för andra hållet:</p>
+        om &lt;tangent [högerpil] nedtryckt&gt;
+            ändra x med 5
+            om &lt;färg [väggens färg] vidrörs&gt;
+                ändra x med -5
 
-<pre>
-om &lt;färg [väggens färg] vidrörs&gt;
-    ändra x med 5
+        om &lt;tangent [vänsterpil] nedtryckt&gt;
+            ändra x med -5
+            om &lt;färg [väggens färg] vidrörs&gt;
+                ändra x med 5
+
+        om &lt;färg [markens färg] vidrörs&gt;
+            sätt YHastighet till 0
+            sätt y till (y-position + 1)
+
+        om &lt;färg [plattformens färg] vidrörs&gt;
+            sätt YHastighet till 0
+            sätt y till (y-position + 1)
 </pre>
 
 <div class="info-box">
